@@ -1,11 +1,18 @@
 var events = [];
 
 function addEvent(title, start, url) {
-    events.push({
-        title: title,
-        start: start,
-        url: url
-    });
+    if ( url ) {
+        events.push({
+            title: title,
+            start: start,
+            url: url
+        });
+    } else {
+        events.push({
+            title: title,
+            start: start
+        });
+    }
 }
 
 $(function(){
